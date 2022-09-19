@@ -41,12 +41,12 @@ p  {
     max-width: 90%;
 }
 .gradient-text {
-    -webkit-background-clip: text;
-    -webkit-box-decoration-break: clone;
-    -webkit-text-fill-color: transparent;
     background-image: linear-gradient(255deg,#032eff,red);
     color: black;
     filter: drop-shadow(0 20px 30px #28d8ff33);
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    -webkit-text-fill-color: transparent;
 }
 .glass-morph{
     -webkit-backdrop-filter: blur(5.1px);
