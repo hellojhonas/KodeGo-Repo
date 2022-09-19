@@ -1,74 +1,74 @@
 body {
     background-image: url(/assets/faded-sun.jpg);
     background-size: cover;
-    width: 90%;
-    margin: auto;
-    padding-top: 40px;
-    padding-bottom: 200px;
-    max-width: 900px;
 
-    /* had done this css below for the untagged contents of the HTML structure */
+    color: #30343f;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: bolder;
     line-height: 1.5;
-    color: #30343f;
+
+    margin: auto;
+    max-width: 900px;
+    padding-bottom: 200px;
+    padding-top: 40px;
+    width: 90%;
 }
 h1 {
-    font-family: 'Titan One', cursive;
-    font-weight: 900;
-    font-size: 45px;
     border-bottom: 3px solid black;
+    font-family: 'Titan One', cursive;
+    font-size: 45px;
+    font-weight: 900;
 }
 h2,h3 {
+    color: #1b2021;
     font-family: 'Righteous', cursive;
     font-size: 35px;
-    color: #1b2021;
 }
 p  {
+    color: #30343f;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     font-weight: bolder;
     line-height: 1.5;
-    color: #30343f;
 }
 .img-maxwidth {
-    max-width: 90%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     border: 3px solid black;
     border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
 }
 .gradient-text {
     background-image: linear-gradient(255deg,#032eff,red);
     filter: drop-shadow(0 20px 30px #28d8ff33);
     color: black;
-    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-box-decoration-break: clone;
+    -webkit-text-fill-color: transparent;
 }
 .glass-morph{
+    backdrop-filter: blur(5.1px);
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
     padding-left: 50px;
     padding-bottom: 20px;
-    margin-bottom: 50px;
-    background: rgba(255, 255, 255, 0.22);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.1px);
     -webkit-backdrop-filter: blur(5.1px);
-    border: 1px solid rgba(255, 255, 255, 0.42);
 }
 .code {
+    backdrop-filter: blur(10.1px);
     background: rgba(246, 40, 40, 0.28);
+    border: 1px solid rgba(246, 40, 40, 0.05);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.1px);
-    -webkit-backdrop-filter: blur(10.1px);
-    border: 1px solid rgba(246, 40, 40, 0.05);
+    padding-bottom: 50px;
     padding-left: 50px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    -webkit-backdrop-filter: blur(10.1px);
 }
 .text:hover {
     background-color:#6bc3ef;
@@ -78,11 +78,11 @@ p  {
     transition:background-size 1s, background-color 1s;
 }
 .hover-morph {
-    padding: 5px;
+    backdrop-filter: blur(10.6px);
     background: rgba(246, 40, 40, 0.43);
+    border: 1px solid rgba(246, 40, 40, 0.02);
     border-radius: 8px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.6px);
+    padding: 5px;
     -webkit-backdrop-filter: blur(10.6px);
-    border: 1px solid rgba(246, 40, 40, 0.02);
 }
