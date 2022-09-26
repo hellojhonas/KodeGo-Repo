@@ -1,0 +1,33 @@
+/* body {
+    width: 90%;
+    margin:auto;
+} */
+.center {
+    text-align: center;
+}
+.inline {
+    display: inline;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.box-one {
+    float: left;
+    width: 150px;
+}
+.box-two {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 10px;
+    margin: auto;
+    width: 550px;
+}
+.box-three {
+    width: 150px;
+    position: absolute;
+    top: 125px;
+    right: 20px;
+}
+img {
+    width: 100px;
+    height: 150px;
+}
