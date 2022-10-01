@@ -31,9 +31,14 @@ nav ul li {
     padding: 3px;
 }
 
+img {
+    max-width: 100%;
+}
+
 nav img {
     margin: 4px;
-    width: 100%;
+    width: 100px;
+
 }
 
 .li-nav-items {
@@ -43,12 +48,21 @@ nav img {
     align-items: center;
 }
 
+p {
+    margin-bottom: 1.5rem;
+    line-height: 1.4rem;
+    color: #333;
+}
+
+/* Header */
 header {
     background: url(../assets/img/Sunset.jpg);
     background-size: cover;
+
+
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 80vh;
 }
 
@@ -66,9 +80,157 @@ header {
 .header-content a {
     border: 1px solid #333;
     background-color: #fff;
-    padding: 15px 20px;
+    border-radius: 5px;
+    color: #333;
     font-size: 1.2rem;
     font-weight: bold;
+    padding: 15px 20px;
     text-decoration: none;
-    border-radius: 5px;
 }
+
+header > div {
+    margin: 40px;
+}
+
+/* Main Content */
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    margin: auto; /*center content in your container*/
+    max-width: 1900px;
+}
+
+main {
+    padding: 10px;
+}
+
+.post-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-info {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #14213d;
+}
+
+.post-author {
+    margin: 10px;
+}
+
+aside {
+    padding: 10px;
+}
+
+.about-me {
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.03);
+}
+
+.about-me img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.post-content h1 {
+    color: #14213d;    
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo-text {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #ffbe0b;
+}
+
+footer {
+    background-color: #003049;
+    color: white;
+    text-align: center;
+}
+
+.about p {
+    color: #8d99ae;
+}
+
+.logo-text ~ span {
+    color: #fff;
+}
+
+footer .contact i {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.socials a {
+    margin: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #fcbf49;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #0077b6;
+    font-size: 30px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.socials {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 675px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .li-nav-items {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 20px;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    main {
+        width: 70%;
+    }
+    aside {
+        width: 30%;
+
+    }
+    .container-flex {
+        flex-direction: row;
+    }
+
+}
+
