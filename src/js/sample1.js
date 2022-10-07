@@ -1,0 +1,1 @@
+alert("Well Hello, Hello, you are entering my JavaScript intro code along!");
