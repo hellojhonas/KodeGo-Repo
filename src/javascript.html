@@ -4,17 +4,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Sample</title>
+    <title>JavaScript Samples</title>
 
-    <script src="./js/sample1.js"></script>
+    <script src="./js/sample1.js"></script> <!--code along day 32-->
+
+    <!--below is code along day 33-->
+    <style>
+        table {
+            border: 2px solid black;
+        }
+    </style>
 
 </head>
 <body>
+    <h2>Code along Day 32 (10-07-2022) starts here ...</h2>
+        <script>
+            document.write("<h1> Hello Wooooooorld </h1>");
+        </script>
+
+
+    <h2>Code along Day 33 (10-08-2022) starts here ...</h2>
+        <script>
+            let firstname;
+            firstname = 'Juan Miguel';
+            document.write(firstname + " " + "<br />");
+            firstname = 'Juan Carlos Nobody';
+            document.write(firstname);
+        </script>
+    <p>
+        The above script declares a variable, assigns a value to it, displays the value, changes the value and dipslays the value again.
+    </p>
+    <h1>Playground</h1>
+    <span>Table of Opertaions Given x = 10 and y = 5</span>
+        <table cellpadding="5" border="1">
+                <script>
+                    let x = 10, y = 5;
+                    
+                </script>
+            <tr>
+                <td>Operator</td><td>Example</td><td>Result</td>
+            </tr>
+            <tr>
+                <td>=</td>
+                <td>x = y</td>
+                <td> 
+                    <script>
+                        document.write(y);
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>+=</td>
+                <td>x += y</td>
+                <td>
+                    <script>
+                        document.write(x += y);
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>x -= y</td>
+                <td>
+                    <script>
+                        x =10, y=5; //this is necessary to add because x is 15 on the previous table row and script
+                        x -= y;
+                        document.write(x);
+                    </script>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <h2>Code along Day 35 (10-11-2022) starts here ...</h2>
+        <script>
+            const temp = 24;
+            let ans = temp == 10; /* is temp equal to 10? */
+            /* 
+                = mean assigning a value
+                == checking for equality result should be a boolean
+            */
+
+            const passingGrade = 75;
+            grade = 64;
+
+            const z = grade == passingGrade;
+            grade !=passingGrade; /* is grade not equal to passingGrade  TRUE */
+
+            let result = false || false;
+
+            result = (temp == 24 || temp > 100)
+
+            result = ( (passingGrade * 5/2) >=100 || (temp**3 / 45 -50)< 500 );
+
+            // if (temp == 24){
+            //     document.write(grade);
+            // } my sample conditional statement
+
+
+            if (grade >= passingGrade) {
+                alert ("Congrats, you passed!")
+            }
+
+            if ((grade <= passingGrade -1) && (grade >= 50)){
+                alert ("Try harder next time, you almost made it! You got " + grade );
+            }
+            if(grade < 50){
+                alert("Sorry");
+            }
+        </script>
+
+        <span>Score of Rachel</span>
+        <input type="text" name="input" id="my-input">
+        <button id="btn">Click</button>
 
 
 
-    <script>
-        document.write("<h1> Hello Wooooooorld </h1>");
-    </script>
 </body>
 </html>
