@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo of if ... else </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script>
+        const today = Date.now();
+        let greetings;
+        console.log(today);//web console debugging
+        const d = new Date(today); //created a new date that has an argument that contains the milliseconds from Jan 1 1970 up until now
+        console.log(d);//this is in 24 hr format
+
+        const currentTimeInHours = d.getHours();
+        console.log(currentTimeInHours);
+
+        //convert to 12hr format
+        let convertedTime;
+        //i.e 8am to 12hr format
+        //i.e 12 to 12hr format
+
+        if (currentTimeInHours > 12){
+            convertedTime = currentTimeInHours - 12 ;
+        }
+        else{
+            convertedTime = currentTimeInHours;
+        }
+
+        if(currentTimeInHours == 0){
+            greetings = 'Buenas dias (good morning)! Time now is' + convertedTime + 'am';
+        }
+            else if(currentTimeInHours >= 12 && currentTimeInHours < 18) {
+                greetings = 'Buenas tardes(good afternoon)! Time now is' + convertedTime + 'pm';
+            }
+            else{
+                greetings = 'Beunos Noches(good evening)' + convertedTime + 'pm';
+            }
+
+
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h1>Demo of Conditionals Using Time</h1>
+                <p>
+                    <script>
+                        document.write(greetings);
+                    </script>
+                </p>
+
+
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>
