@@ -13,7 +13,8 @@
         let greetings;
         console.log(today);//web console debugging
         const d = new Date(today); //created a new date that has an argument that contains the milliseconds from Jan 1 1970 up until now
-        console.log(d);//this is in 24 hr format
+        console.log(d);//this is in 24 hr format i.e 
+        //Thu Oct 13 2022 20:38:15 GMT +0800 ( PST )
 
         const currentTimeInHours = d.getHours();
         console.log(currentTimeInHours);
@@ -30,7 +31,7 @@
             convertedTime = currentTimeInHours;
         }
 
-        if(currentTimeInHours == 0){
+        if(currentTimeInHours >= 0 && currentTimeInHours <12){
             greetings = 'Buenas dias (good morning)! Time now is' + convertedTime + 'am';
         }
             else if(currentTimeInHours >= 12 && currentTimeInHours < 18) {
