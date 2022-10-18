@@ -8,9 +8,9 @@
 
     <script>
         let x = 5;
-        function greetUser(){
-            alert("Good Evening!");
-        }
+        // function greetUser(){
+        //     alert("Good Evening!");
+        // }
 
         const fxn = function(){//function expression
             console.log("I was called!");
@@ -19,10 +19,38 @@
         const logMessage = function loggingFxn () {//function expression
             console.log("loggingFxn function call was executed!");
         }
+
+        const add = function (a,b){
+            alert ("Sum is " + (a+b));
+        }
+
+        function getAge(yearBorn) {
+            let intYearBorn = parseInt(yearBorn);
+            const today = Date.now();
+            const d = new Date(today);
+            const age = d.getFullYear() - intYearBorn;
+            return age;
+        }
     </script>
 </head>
 
 <body onload="greetUser()">
     <h1>Functions</h1>
+
+    <label for="">Enter first number: </label>
+    <input type="text" name="" id="first-num" value="0">
+    <br>
+    <label for="">Enter second number: </label>
+    <input type="text" name="" id="second-num" value="0">
+    <br>
+    <button onclick="add( parseInt(document.getElementById('first-num').value), parseInt(document.getElementById('second-num').value))">Show Result</button>
+
+    <hr>
+    <fieldset>
+        <legend>Age Calculator</legend>
+        <label for="">Enter The Year You Were Born: </label>
+        <input type="text" name="yr" id="yr" onblur="alert(getAge(document.getElementById('yr').value))">
+    </fieldset>
+    
 </body>
 </html>
