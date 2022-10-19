@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    <h1>Attendance Sheet</h1>
+    <p>
+        <span>Enter the number of participants: </span>
+        <input type="text" name="" id="num-participants">
+        <button onclick="generateAttendanceForm()">Generate</button>
+    </p>
+    <div id="form-container">
+
+    </div>
+    <script>
+        let pContainer = document.querySelector('#form-container');
+        pContainer.innerHTML = '<input type="text">';
+        function generateAttendanceForm(){
+            let totalParticipants = parseInt(document.querySelector('#num-participants').value);
+            let counter = 0;
+            let strTags ='';
+            while (counter < totalParticipants) {
+                counter ++;
+                strTags += '<p>';
+                strTags += '<label>Enter Attendee ' + counter + '<label>';
+                strTags += '<input type="text" placeholder="Name of Attendee ' + counter +' ">';
+                strTags += '<p>';
+                console.log(counter);
+            }
+            strTags += '<p><input type="Submit" value="Submit"></p>';
+            pContainer.innerHTML = strTags;
+        }
+
+    </script>
+</body>
+</html>
