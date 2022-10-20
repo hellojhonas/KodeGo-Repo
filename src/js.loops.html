@@ -7,6 +7,7 @@
     <title>While Loop</title>
 </head>
 <body>
+    
     <h1>Attendance Sheet</h1>
     <p>
         <span>Enter the number of participants: </span>
@@ -14,7 +15,6 @@
         <button onclick="generateAttendanceForm()">Generate</button>
     </p>
     <div id="form-container">
-
     </div>
     <script>
         let pContainer = document.querySelector('#form-container');
@@ -34,7 +34,54 @@
             strTags += '<p><input type="Submit" value="Submit"></p>';
             pContainer.innerHTML = strTags;
         }
+    </script>
+    <h3>While loop</h3>
+    <p>Syntax:</p>
+    <pre>
+        while (var <= endvalue ){
+            code to be executed;
+        }
+    </pre>
+    <script>
+        let i = 0;
+        while (i < 5) {
+            document.write("the number is " + i);
+            document.write("<br>");
+            i++;
+        }
+    </script>
 
+    <h3>Do while loop</h3>
+    <p>Syntax:</p>
+    <pre>
+        do{
+            //code to be executed
+        }
+        while (var <= endvalue); 
+    </pre>
+    <script>
+        let j = 0;
+        do{
+            document.write("The number is " + j);
+            document.write("<br>");
+            j++;
+        } while (j<=5);
+
+    </script>
+
+    <h3>For loop</h3>
+    <p>Syntax:</p>
+    <pre>
+        for(var=startvalue; var<=endvalue; var=var+increment){
+            code to be executed
+        }
+    </pre>
+    <script>
+        for (let x = 5; x <= 9; x++) {
+            console.log("The loop run for " + (x-4));
+            document.write("The loop run for " + (x-4));
+            document.write("<br>");
+        }
     </script>
 </body>
 </html>
