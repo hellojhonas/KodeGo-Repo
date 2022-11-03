@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement Demo</title>
+</head>
+<body>
+    <h1>Switch Statement Demo</h1>
+    <input type="text" name="random-num" id="random-num" placeholder="Enter an integer value">
+    <button onclick="switchDemo()">Click me</button>
+    <p id="msg"></p>
+
+    <script>
+        function switchDemo() {
+            // console.log('switchDemo called');
+            let input = document.getElementById('random-num').value;
+            console.log(input);
+            let pElMsg = document.getElementById("msg");
+
+            switch (input){
+                case '1': //input == 1
+                    pElMsg.textContent = 'You have entered a very low number';
+                break;
+                case '2':
+                    pElMsg.textContent = 'Can you do a little bit better than that?';
+                break;
+                
+                default:
+                    pElMsg.textContent = 'Not within range';
+            }
+
+        }
+    </script>
+</body>
+</html>
