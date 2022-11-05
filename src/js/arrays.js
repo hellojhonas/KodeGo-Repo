@@ -28,12 +28,48 @@ console.log("The first book in our collection that Albert borrowed is " + borrow
 console.log("--------------------------------");
 console.log("Our updated book colleciton is as follows: ", booksArr.join("|"));
 
-myArr2 = [1, 2];
+//map array concept
+let booksArrayToUpper = booksArr.map(function (f) {
+    return f.toUpperCase();
+});
+console.log(booksArrayToUpper);
+console.log(booksArr);
+
+
+//check for case sensitivity
+//check if not occurence is found
+let myArr3 = [1, 2, 3, 'a', 'e', 10];
+console.log(myArr3.includes(1));
+
+//function of search book
+let searchBook = function search() {
+    let bookToSearch = document.querySelector('#search-book').value;
+    let searchResultElement = document.querySelector('#search-result');
+
+    if (booksArrayToUpper.includes(bookToSearch.toUpperCase())) {
+        searchResultElement.textContent = 'Book is in the collection';
+    }
+    else {
+        searchResultElement.textContent = 'Book is currently unavailable';
+    }
+    console.log(booksArrayToUpper.includes(bookToSearch.toUpperCase()));
+}
+
+
+
+//concat an array concept
+let myArr2 = [1, 2];
 let values = [5, 6, 7];
 
 let newArr = myArr2.concat(values);
 console.log(newArr);
 
+
+let booksStr = '';
+booksArrayToUpper.forEach(function (f) {
+    booksStr = booksStr + "<li>" + f + "</li>";
+});
+document.getElementById("books").innerHTML = "<ul>" + booksStr +"</ul>";
 
 
 //number array for forEach method
