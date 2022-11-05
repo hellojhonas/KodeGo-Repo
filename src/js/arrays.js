@@ -20,8 +20,23 @@ console.log("The books collection now contains " + booksArr.length + " books");
 
 booksArr.unshift("The Prince")
 console.log("Manuel donated a book named The Prince");
-console.log("Our collection now contains " + booksArr.length + " books", booksArr);
+console.log("Our collection now contains " + booksArr.length + " books: ", booksArr.join(" | "));
 
+console.log("Albert wanted to borrow the first book in the collection");
+borrowedBook = booksArr.shift();
+console.log("The first book in our collection that Albert borrowed is " + borrowedBook);
+console.log("--------------------------------");
+console.log("Our updated book colleciton is as follows: ", booksArr.join("|"));
+
+myArr2 = [1, 2];
+let values = [5, 6, 7];
+
+let newArr = myArr2.concat(values);
+console.log(newArr);
+
+
+
+//number array for forEach method
 myArr1 = [2, 5, 7, 9];
 myArr1.forEach((e) => {
     console.log(e * 2);
