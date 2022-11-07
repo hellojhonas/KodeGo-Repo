@@ -7,7 +7,7 @@ console.log(myArr[3]);
 
 //books array
 let myArr1 = [];
-let booksArr = new Array ("Book of Five rings", "The art of War", "Book of the Roman Army");
+let booksArr = new Array ("Book of Five rings", "The Art of War", "Book of the Roman Army", "Leadership", "Men are from Mars" , "Tomorrow is Too Late");
 
 booksArr.push("48 Laws of Power");
 console.log(booksArr);
@@ -54,6 +54,25 @@ let searchBook = function search() {
     }
     console.log(booksArrayToUpper.includes(bookToSearch.toUpperCase()));
 }
+
+//I initiated an empty array
+let filteredBooksByTitleLength = new Array();
+
+filteredBooksByTitleLength =booksArr.filter( function(bookTitle) {
+    return bookTitle.length <= 14;
+});
+
+console.log(filteredBooksByTitleLength);
+
+//another example
+let anotherBookArr = new Array();
+anotherBookArr = booksArr.slice(2, 4);
+console.log("Cropped Array", anotherBookArr);
+console.log(booksArr);
+
+console.log("The librarian figured out the two books were damaged and has to be replaced");
+booksArr.splice(0, 2, "The Road Less Traveled");
+console.log("The new book collection: ", booksArr);
 
 
 

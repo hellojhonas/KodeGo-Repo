@@ -1,0 +1,1 @@
+alert("Hi, you're at the 'Height in Meters' Exercise");

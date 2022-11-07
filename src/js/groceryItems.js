@@ -1,0 +1,1 @@
+alert("Hi, you're at the 'Grocery Items' Exercise");

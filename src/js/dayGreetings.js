@@ -1,0 +1,1 @@
+alert("Hi, you're at the 'Day Greetings' Exercise");
