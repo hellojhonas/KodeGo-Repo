@@ -11,7 +11,35 @@
 
 </head>
 <body>
-    <h1>Odd or Even</h1>
+    <div class="container-fluid">
+
+        <div class="row text-center">
+            <h1>Odd or Even</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                    <h2>Task:</h2>
+                    <p>Create a HTML Page in which the user can enter a value and from that value, determine if the entered number is even or an odd number</p>
+                    <h2>Script that I used</h2>
+                    <img src="../assets/js.snaps/oddOrEven.png" alt="script" width="100%" class="rounded">
+            </div>
+
+            <div class="col-6">
+                <h2>Output:</h2>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <input class="form-control mb-4" type="text" id="number" value="" placeholder="Enter a whole number">
+                <button type="submit" class="btn btn-primary mb-3" onclick="oddOrEven()">Run</button>
+                <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
 
     <script src="../js/oddOrEven.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
