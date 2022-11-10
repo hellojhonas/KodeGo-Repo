@@ -74,6 +74,27 @@ console.log("The librarian figured out the two books were damaged and has to be 
 booksArr.splice(0, 2, "The Road Less Traveled");
 console.log("The new book collection: ", booksArr);
 
+//code along 11-09-2022
+let myStr ="The quick brown for jumps over the quick dog";
+let result = myStr.indexOf("quick");
+console.log(result);
+
+result = myStr.lastIndexOf("quick");
+console.log(`The last index of quick is at position ${result}`);
+
+let str = 'you';
+const res = str.split("");
+console.log(res);
+
+let myStr1 = "Hello World";
+console.log(myStr1.split("__"));
+
+let found = myStr1.includes("World");
+console.log(found);
+
+let lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+console.log(lorem.slice(7,10));
+
 
 
 //concat an array concept
