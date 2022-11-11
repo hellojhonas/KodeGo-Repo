@@ -12,7 +12,33 @@
 
 </head>
 <body>
-    <h1>Day Greetings</h1>
+    <div class="container-fluid">
+
+        <div class="row text-center">
+            <h1>Day Greetings</h1>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                    <h2>Task:</h2>
+                    <p>Create an HTML Page that will allow a user to input the day of the week and based on the day, generate a message greeting.</p>
+                    <h2>Script that I used</h2>
+                    <img src="../assets/js.snaps/greetings.png" alt="script" width="100%" class="rounded">
+            </div>
+
+            <div class="col-6">
+                <h2>Output:</h2>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p>What's your favorite day of the week?</p>
+                        <input class="form-control" type="text" name="" id="chosenday" placeholder="Enter your day"><span class="btn btn-primary" onclick="greet()" >Enter</span>
+                        <span id="greetings"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
     
 
     <script src="../js/dayGreetings.js"></script>
