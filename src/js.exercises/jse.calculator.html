@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/jse.calculator.css">
 </head>
-<body>
+<body onload="startMyTime()">
     
     <div class="container-fluid">
         <div class="row text-center">
@@ -44,14 +44,14 @@
                 </ol>
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 text-center">
                 <h2>Output:</h2>
                 <div class="card">
                     <div class="card-body">
                         <div class="card-header rounded-top">
                             Hey there! Need some help in calculations? Try this calculator out!
                         </div>
-                        <div class="calculator-grid">
+                        <!-- <div class="calculator-grid">
                             <div class="output">
                                 <div data-previous-operand class="previous-operand"></div>
                                 <div data-current-operand class="current-operand"></div>
@@ -75,6 +75,34 @@
                         <button data-number>0</button>
                         <button data-equals class="span-two">=</button>
                     
+                        </div>calculator version 1 -- had to comment this out to give way to the assigned codes-->
+                        <div class="calculator">
+                            <h2>Basic Calculator</h2>
+                            <p id="display-time" class="ms-2 me-5 display-5"></p>
+                            <span id="ampm"></span>
+                            <select id="hourFormat" class="form-select" aria-label="Default select example" onclick="startMyTime()">
+                                <option value="regular" selected>12 Hour Format</option>
+                                <option value="military">24 Hour Format</option>
+                            </select>
+                        <input type="text" class="calculator-screen" id="screen" />
+                            <div class="calculator-keys">
+                                <button type="button" class="operator" value="/" onclick="calculator.setCalculatorOperation('/')"> &divide;</button>
+                                <button type="button" class="operator" value="*" onclick="calculator.setCalculatorOperation('*')">&times;</button>
+                                <button type="button" class="operator" value="+" id="plus-button" onclick="calculator.setCalculatorOperation('+')">+</button>
+                                <button type="button" class="operator" value="-" id="minus-button" onclick="calculator.setCalculatorOperation('-')">-</button>
+                                <button type="button" value="7" onclick="calculator.digitClicked('7')">7</button>
+                                <button type="button" value="8" onclick="calculator.digitClicked('8')">8</button>
+                                <button type="button" value="9" onclick="calculator.digitClicked('9')">9</button>
+                                <button type="button" value="4" onclick="calculator.digitClicked('4')">4</button>
+                                <button type="button" value="5" onclick="calculator.digitClicked('5')">5</button>
+                                <button type="button" value="6" onclick="calculator.digitClicked('6')">6</button>
+                                <button type="button" value="1" onclick="calculator.digitClicked('1')">1</button>
+                                <button type="button" value="2" onclick="calculator.digitClicked('2')">2</button>
+                                <button type="button" value="3" onclick="calculator.digitClicked('3')">3</button>
+                                <button type="button" value="0" class="zero" onclick="calculator.digitClicked('0')">0</button>
+                                <button type="button" class="all-clear" value="all-clear" onclick="calculator.cls()">C</button>
+                                <button type="button" class="equal-sign" value="=" onclick="calculator.displayResults()">=</button>
+                            </div>
                         </div>
                     </div>
                 </div>

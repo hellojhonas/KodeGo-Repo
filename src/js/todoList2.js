@@ -42,12 +42,12 @@ window.onload = function () {
         pEl.innerHTML = '';
         let list = `
         <li class="todo-item">
-            <label class="control--checkbox">                    
+            <label class="control--checkbox">
                 <strong>Modify the "Your To Do List" and Add an Edit Feature to
                 Modify the task name that are not yet marked as "Done" </strong>
                 <input data-id="0" type="checkbox" disabled>
                     <div class="checked-icon"></div>
-            </label>            
+            </label>
         </li>`;
         for (var i = 0; i < todos.length; i++) {
             var item = createItemTemplate(todos[i]);
@@ -91,9 +91,9 @@ window.onload = function () {
         item += '<input data-id="' + todo.id + '" type="checkbox" ' + (todo.done ? 'checked' : '') + ' />';
         item += '<div class="checked-icon"></div>';
         item += '</label>';
-        item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="fa fa-trash">DELETE</i></button>';
+        item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="bi bi-pencil-square">Edit</i></button>';
+        item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="bi bi-trash3">Delete</i></button>';
         item += '</li>';
-
         return item;
     }
 
@@ -114,4 +114,6 @@ window.onload = function () {
         }
     }
 
+
 };
+// todolist version 1 - the above code is the code from the code along of Sir Erwin

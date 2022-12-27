@@ -19,31 +19,33 @@
 
 <body>
     <main>
-    <div class="container-fluid">
+    <div class="container-fluid g-0">
 
         <div class="row">
-            <h1>Hello there, Call me Jhonas.</h1>
-                <p> Welcome to my Homepage.</p>
-            <hr>
-            <h2> Here outlines my journey with KodeGo</h2>
+            <div class="col-lg-1 col-sm-2 align-self-center">
+                <img src="./src/assets/profile.png" alt="" class="img-fluid rounded m-1">
+            </div>
+            <div class="col ms-3">
+                <h1>Hello there, Call me Jhonas.</h1>
+                <p> Welcome to my Homepage. Here outlines my journey with KodeGo. For the best user experience, it is highly recommended to explore this website on a horizontal screen. If you're interested about my works, here is a <a href="https://hellojhonas.github.io/kg-project-one/" target="_blank">link to my porfolio</a>. Thank you for viewing my journey with KodeGo.</p>
+            </div>
         </div>
 
-        <div class="row">
-
+        <div class="row g-0 flex-fill">
+            <hr>
             <!-- my works navigation -->
-            <div class="col-lg-3 col-md-3 col-sm-12">
-                <h3>My Works</h3>
-                <div class="accordion" id="accordionExample">
-
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="accordion accordion-flush" id="accordionExample">
+                    <h3>My Works</h3>
                     <!-- HTML Exercises -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><i class="bi bi-filetype-html" style="font-size: 1.5rem;"></i>
                             HTML Exercises
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body accordion-content">
                         <ol>
                             <li>
                                 <a href="./src/html.exercises/exercise1.html" target="iframe_a">Paragraphs and Comments</a>
@@ -80,12 +82,12 @@
                     <!-- CSS Exercises -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="bi bi-filetype-css" style="font-size: 1.5rem;"></i>
                             CSS Exercises
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body accordion-content">
                         <ol start="10">
                             <li>
                                 <a href="./src/css.exercises/css_exercise1.html" target="iframe_a">(09-19-22) CSS Basics</a>
@@ -109,13 +111,17 @@
                     <!-- Project 1 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="false" aria-controls="projectOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="false" aria-controls="projectOne"><i class="bi bi-file-code" style="font-size: 1.5rem;"></i>
                             Major Project 1
                           </button>
                         </h2>
                         <div id="projectOne" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <a href="https://hellojhonas.github.io/kg-project-one/" target="iframe_a">Portfolio Website</a>
+                          <div class="accordion-body accordion-content">
+                            <ul>
+                                <li>
+                                    <a href="https://hellojhonas.github.io/kg-project-one/" target="iframe_a">Portfolio Website</a>
+                                </li>
+                            </ul>
                           </div>
                         </div>
                     </div>
@@ -123,12 +129,12 @@
                     <!-- JavaScript Code Along -->
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="bi bi-keyboard" style="font-size: 1.5rem;"></i>
                             JavaScript Code Along
                         </button>
                       </h2>
                       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
+                        <div class="accordion-body accordion-content">
                         <ul>
                             <li>
                                 <a href="./src/js.code-along/javascript.html" target="iframe_a">(10-07-22) JavaScript Intro Code Along</a>
@@ -174,12 +180,12 @@
                     <!-- JavaScript Exercises -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><i class="bi bi-filetype-js" style="font-size: 1.5rem;"></i>
                             JavaScript Exercises
                           </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
+                          <div class="accordion-body accordion-content">
                           <ol start="14">
                                 <li>
                                     <a href="./src/js.exercises/jse.groceryItems.html" target="iframe_a">Grocery Items</a>
@@ -216,13 +222,17 @@
                     <!-- Project 1 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo" aria-expanded="false" aria-controls="projectTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo" aria-expanded="false" aria-controls="projectTwo"><i class="bi bi-file-code" style="font-size: 1.5rem;"></i>
                             Major Project 2
                           </button>
                         </h2>
                         <div id="projectTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <a href="https://virgelnoserale.github.io/miniproject2/" target="iframe_a">Herbal Website</a>
+                          <div class="accordion-body accordion-content">
+                            <ul>
+                                <li>
+                                    <a href="https://virgelnoserale.github.io/miniproject2/" target="iframe_a">Herbal Website</a>
+                                </li>
+                            </ul>
                           </div>
                         </div>
                     </div>
@@ -232,9 +242,9 @@
             </div>
 
             <!-- my works display output -->
-            <div class="col-lg-9 col-md-9 col-sm-12">
+            <div class="col-lg-8 col-md-12 col-sm-12">
                 <h3>The Results</h3>
-                <iframe style="border: 1px solid black; max-width: 900px;" frameborder="0" height="700px" src="./src/assets/img/home.jpg" width="100%"  name="iframe_a"></iframe>
+                <iframe src="./src/assets/img/home.jpg" width="100%"  name="iframe_a" style="height: 77vh; border:1px solid black;"></iframe>
             </div>
 
         </div>
@@ -242,6 +252,7 @@
     </div>
     </main>
 
+    <script src="./src/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

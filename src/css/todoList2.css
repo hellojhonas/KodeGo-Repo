@@ -1,3 +1,6 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+
 * {
 box-sizing: border-box;
 }
@@ -19,7 +22,7 @@ color: #465a6e;
 }
 
 header input {
-display: block;
+/* display: block; */
 width: 100%;
 padding: 16px;
 outline: none;
@@ -34,7 +37,7 @@ color:#868e96;
 }
 
 .todos-box {
-width: 760px;
+/* width: 760px; */
 margin: 20px auto;
 background-color: #fff;
 font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -68,11 +71,11 @@ text-decoration-color: #2aa1c0;
 
 .todo-item label {
 font-size: 14px;
-    position: relative;
-    margin: auto 0;
-    padding-left: 30px;
+position: relative;
+margin: auto 0;
+padding-left: 30px;
 padding-top: 5px;
-    cursor: pointer;
+cursor: pointer;
 }
 
 .todo-item input {
@@ -80,19 +83,19 @@ display: none;
 }
 
 .checked-icon{
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background-color: #e6e6e6;
+position: absolute;
+top: 2px;
+left: 0;
+width: 20px;
+height: 20px;
+background-color: #e6e6e6;
 transition: all .25s ease;
 }
 
 .checked-icon:after {
-    position: absolute;
-    display: none;
-    content: '';
+position: absolute;
+display: none;
+content: '';
 top: 4px;
 left: 8px;
 width: 3px;
@@ -111,7 +114,7 @@ transition: all .25s ease;
 display: block;
 }
 
-.remove-todo-btn {
+/* .remove-todo-btn {
 display: none;
 position: absolute;
 right: 12px;
@@ -120,13 +123,14 @@ bottom: 0;
 background-color: transparent;
 border: 0;
 outline: none;
-}
+} */
 
-.remove-todo-btn i{
+/* .remove-todo-btn i{
 cursor: pointer;
 color: #465a6e;
 }
 
 .todo-item:hover .remove-todo-btn{
 display: block;
-}
+} */
+/* todolist2 version 1 css above */
