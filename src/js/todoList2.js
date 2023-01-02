@@ -3,24 +3,22 @@ window.onload = function () {
     init();
 
     function init() {
-        todos = JSON.parse(localStorage.getItem('todos')) || []; // OR it with empty array for undefined        
+        todos = JSON.parse(localStorage.getItem('todos')) || [];
         renderItems();
         bindInputEvents();
-
     }
 
     function bindInputEvents() {
         document.getElementById('to-do-input').addEventListener('keypress', function (event) {
             let task = this.value;
             if (event.key === 'Enter') {
-                // console.log('ENTER key is pressed');
                 createTodo(task);
                 syncLocalStorage();
                 renderItems();
                 this.value = '';
+                reloadPage();
             }
         });
-
     }
 
     function createTodo(task) {
@@ -55,33 +53,56 @@ window.onload = function () {
         }
         pEl.innerHTML = list;
 
-        document.querySelectorAll('#todo-tasks-list li button').forEach(function (item) {
-            item.addEventListener('click', function (event) {
-                let dataId = item.getAttribute('data-id');
-                removeItem(dataId);
-                syncLocalStorage();
-                renderItems();
-            });
-
-        });
         document.querySelectorAll('#todo-tasks-list li input').forEach(function (item) {
             item.addEventListener('click', function (event) {
                 let dataId = item.getAttribute('data-id');
 
                 if (item.getAttribute('checked')) {
-                    // update the "done" parameter as true
                     item.setAttribute('checked', false);
                     updateItem(dataId, false);
                 } else {
-                    // update the "done" parameter as false
-                    // lagyan ng check
                     item.setAttribute('checked', true);
                     updateItem(dataId, true);
                 }
                 syncLocalStorage();
                 renderItems();
+                reloadPage();
             })
         });
+    }
+    
+    document.querySelectorAll('#todo-tasks-list li button.remove-todo-btn').forEach(function (item) {
+        item.addEventListener('click', function (event) {
+            let dataId = item.getAttribute('data-id');
+            removeItem(dataId);
+            syncLocalStorage();
+            renderItems();
+            reloadPage();
+        });
+
+    });
+
+    // Add an Edit Feature to Modify the task name that are not yet marked as "Done"
+    document.querySelectorAll('#todo-tasks-list li button.edit-todo-btn').forEach(function (item) {
+        item.addEventListener('click', function (event) {
+            let dataId = item.getAttribute('data-id');
+            let taskInput = prompt('Please enter new task:');
+            if (taskInput) {
+                updateItemTask(dataId, taskInput);
+                syncLocalStorage();
+                renderItems();
+                reloadPage();
+            }
+        });
+    });
+
+    function updateItemTask(id, task) {
+        for (var i = 0; i < todos.length; i++) {
+            if (todos[i].id == id && todos[i].done == false) {
+                todos[i].task = task;
+                break;
+            }
+        }
     }
 
     function createItemTemplate(todo) {
@@ -91,7 +112,7 @@ window.onload = function () {
         item += '<input data-id="' + todo.id + '" type="checkbox" ' + (todo.done ? 'checked' : '') + ' />';
         item += '<div class="checked-icon"></div>';
         item += '</label>';
-        item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="bi bi-pencil-square">Edit</i></button>';
+        item += '<button data-id="' + todo.id + '" class="btn edit-todo-btn"><i class="bi bi-pencil-square">Edit</i></button>';
         item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="bi bi-trash3">Delete</i></button>';
         item += '</li>';
         return item;
@@ -114,6 +135,8 @@ window.onload = function () {
         }
     }
 
+    function reloadPage() {
+        window.location.reload();
+    }
 
 };
-// todolist version 1 - the above code is the code from the code along of Sir Erwin
