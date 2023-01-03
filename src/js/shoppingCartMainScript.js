@@ -37,7 +37,7 @@ window.onload = () => {
         itemsList.innerHTML = ''
         let item = ''
         for (let i = 0; i < data.length; i++) {
-            item += `<div class="col m-2">
+            item += `<div class="col-3 m-2">
                         <div class="thumbnail card h-100 justify-content-between">
                         <img src='${data[i].product.images[0]}' alt='${data[i].product.title}' class="card-img-top img"/>
                             <div class="caption p-3 d-flex flex-column justify-content-between">
