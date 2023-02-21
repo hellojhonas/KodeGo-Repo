@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.img-contained {
+    width: auto;
+    height: 50px;
+}
+p {
+    text-align: justify;
+}
+h2 {
+    color:#4285f4 ;
+    font-weight: 600;
+}
+
+.blue {
+    color:#4285f4 ;
+    font-weight: 600;
+}
+.red {
+    color: #ea4335;
+    font-weight: 600;
+}
+.green {
+    color: #34a853;
+    font-weight: 600;
+}
+.yellow {
+    color: #fbbc05;
+    font-weight: 600;
+}
