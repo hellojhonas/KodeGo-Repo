@@ -8,7 +8,15 @@
     <!-- details: Create an HTML Page that will allow a user to input the day of the week and based on the day, generate a message greeting.  -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    
+    <style>
+        .greetings-img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+    </style>
 
 </head>
 <body>
@@ -29,8 +37,8 @@
                 <h2>Output:</h2>
                 <div class="card text-center">
                     <div class="card-body">
-                        <p>What's your favorite day of the week?</p>
-                        <input class="form-control" type="text" name="" id="chosenday" placeholder="Enter your day"><span class="btn btn-primary" onclick="greet()" >Enter</span>
+                        <h3>What's your favorite day of the week?</h3>
+                        <input class="form-control my-3" type="text" name="" id="chosenday" placeholder="Enter your day"><span class="btn btn-primary" onclick="greet()" >Enter</span>
                         <span id="greetings"></span>
                     </div>
                 </div>

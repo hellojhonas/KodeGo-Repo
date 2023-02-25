@@ -1,5 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
-body {
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+p, a, h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
     /* background-image: url(bg1.png);
     background-size: cover; */

@@ -112,8 +112,8 @@ window.onload = function () {
         item += '<input data-id="' + todo.id + '" type="checkbox" ' + (todo.done ? 'checked' : '') + ' />';
         item += '<div class="checked-icon"></div>';
         item += '</label>';
-        item += '<button data-id="' + todo.id + '" class="btn edit-todo-btn"><i class="bi bi-pencil-square">Edit</i></button>';
-        item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="bi bi-trash3">Delete</i></button>';
+        item += '<div> <button data-id="' + todo.id + '" class="btn edit-todo-btn"><i class="bi bi-pencil-square">Edit</i></button>';
+        item += '<button data-id="' + todo.id + '" class="btn remove-todo-btn"><i class="bi bi-trash3">Delete</i></button> </div>';
         item += '</li>';
         return item;
     }
